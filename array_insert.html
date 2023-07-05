@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Insertion</title>
+
+    <script>
+      //insert element in array
+        let data = [10, 20, 25, 99, 87, 16];
+      //   let newEl=54;
+      //   let position=2;
+
+      // //   console.warn(data)
+      //   for(let i=data.length-1;i>=0;i--){
+      //     if(i>=position){
+      //         data[i+1]=data[i];
+      //         if(i==position){
+      //             data[i]=newEl;
+      //         }
+      //     }
+      //   }
+      //   console.warn(data)
+
+      // function insertEl() {
+      //   let data = [10, 20, 36, 98, 45, 74];
+      //   let newEl = document.getElementById("newEl").value;
+      //   newEl = parseInt(newEl);
+      //   let position = document.getElementById("position").value;
+
+      //   for (let i = data.length - 1; i >= 0; i--) {
+      //     if (i >= position) {
+      //       data[i + 1] = data[i];
+      //       if (i == position) {
+      //         data[i] = newEl;
+      //       }
+      //     }
+      //   }
+      //   console.log(data);
+      // }
+
+      //using javascript function
+      // data.splice(1,0,2000)
+      // console.log(data)
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter Position" />
+    <input type="text" id="newEl" placeholder="Enter New Element" />
+    <button onclick="insertEl()">New Array</button>
+  </body>
+</html>

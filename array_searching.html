@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searching Element In Array</title>
+
+    <script>
+      let data = [10, 20, 98, 78, 45, 67];
+      // let item=78;
+      // let index=undefined
+
+      // for(let i=0;i<=data.length-1;i++){
+      //     if(data[i]==item)
+      //     {
+      //         index=i;
+      //         break;
+      //     }
+      // }
+      // console.warn(index);
+
+      //using js function
+      // console.warn(data.indexOf(45))
+
+      //delete element using js function
+      // let a=data.splice(2,1)
+      // console.log(`removed element is ${a}`)
+      // console.warn(data)
+      
+      console.warn(data);
+      function searchElement() {
+        let data = [10, 20, 98, 78, 45, 67];
+        let item = document.getElementById('searchEl').value;
+        let index = undefined;
+
+        for (let i = 0; i <=data.length - 1; i++) {
+          if (data[i] == item) {
+            index = i;
+            break;
+          }
+        }
+        console.log(`index of searching element is ${index}`);
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="Enter Element u want to search"
+      id="searchEl"
+    />
+    <button onclick="searchElement()">Search Element</button>
+  </body>
+</html>

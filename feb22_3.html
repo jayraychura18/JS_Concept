@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <title>Document</title>
+    </head>
+    <style>
+        /* Pseudo Elements: before, after */
+        /* CSS Reset */
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            border: white solid;
+            height: 100vh;
+            background-color: rgb(36, 56, 102);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        h1{
+            margin-bottom: 5rem;
+        }
+        .list-container{
+            border: solid white;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .icon-container{
+            margin-bottom: 1rem;
+            text-align: right;
+        }
+        .bar-icon{
+            font-size: 1.75rem;
+            cursor: pointer;
+        }
+        ul{
+            list-style: none;
+        }
+        .sport{
+            font-variant: small-caps;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: maroon;
+            font-weight: 600;
+
+            background-color: white;
+            margin-bottom: 0.3rem;
+            text-align: center;
+            padding: 0.3rem;
+        }
+        .hide{
+            display: none;
+        }
+        .pink-bg{
+            background-color: pink;
+        }
+    </style>
+
+    <body>
+        <div class="master-container">
+            <h1>My Favourite Sports</h1>
+            <div class="list-container">
+                <div class="icon-container"><i class="fa-solid fa-bars-progress bar-icon"></i></div>
+                <ul class="game-container">
+                    <li class="sport" id="tt">Table Tennis</li>
+                    <li class="sport">Football</li>
+                    <li class="sport">Chess</li>
+                    <li class="sport">Cricket</li>
+                    <li class="sport">Hockey</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+        const ul = document.querySelector('ul');
+        // console.log(ul.classList.contains('sport'));
+        // console.log(ul.classList.contains('game-container'));
+        
+        // Traversing through DOM
+        // Traversing through parents:
+        const first_sport = document.querySelector('li');
+        // console.log(first_sport);
+        // console.log(first_sport.parentElement);
+        // console.log(first_sport.parentElement.parentElement);
+
+        // console.log(first_sport.parentNode);
+        let master = document.querySelector('.master-container');
+        // console.log(master.parentElement.parentElement.parentElement);
+        // console.log(master.parentElement.parentElement.parentNode);
+
+        // Traversing through children
+        // console.log(master.childElementCount);
+        // console.log(master.childNodes);
+        // console.log(master.children)        // child elements
+        
+        const eye_icon = document.createElement('div');
+        eye_icon.classList.add('icon-container');
+        const list_container = document.querySelector('.list-container');
+        list_container.appendChild(eye_icon);
+
+        eye_icon.innerHTML = `<i class="fa-solid fa-eye bar-icon"></i>`
+    </script>
+</html>
+<!-- 
+    Next Session: firstChild, lastChild, Traversing through siblings
+ -->

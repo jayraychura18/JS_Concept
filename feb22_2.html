@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Pseudo Elements: before, after */
+    /* CSS Reset */
+    *,
+    ::before,
+    ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        border: white solid;
+        height: 100vh;
+        background-color: rgb(36, 56, 102);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+    h1{
+        margin-bottom: 5rem;
+    }
+    ul{
+        list-style: none;
+        border: solid white;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .sport{
+        font-variant: small-caps;
+        font-size: 1.5rem;
+        font-style: italic;
+        color: maroon;
+        font-weight: 600;
+
+        background-color: white;
+        margin-bottom: 0.3rem;
+        text-align: center;
+        padding: 0.3rem;
+    }
+    .hide{
+        display: none;
+    }
+    .pink-bg{
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div class="master-container">
+        <h1>My Favourite Sports</h1>
+        <ul class="game-container">
+            <li class="sport" id="tt">Table Tennis</li>
+            <li class="sport">Football</li>
+            <li class="sport">Chess</li>
+            <li class="sport">Cricket</li>
+            <li class="sport">Hockey</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // let new_li = document.createElement('li');
+    
+    // new_li.innerText = 'Formula One';
+    
+    // let ul = document.querySelector('ul');
+    // ul.append(new_li);
+    
+    // // getAttribute
+    // let first_li = document.querySelector('li');
+    // console.log(first_li.getAttribute('id'));
+    // console.log(first_li.getAttribute('class'));
+
+    // // setAttribute
+    // new_li.setAttribute('class', 'sport');
+    
+
+    // adding a class using Classlist
+    // let first_li = document.querySelector('li');
+    // console.log(first_li.classList);
+    // first_li.setAttribute('class', 'hide');
+    // first_li.setAttribute('class', 'pink-bg');
+
+    // first_li.classList.add('pink-bg')
+    // console.log(first_li.classList);
+    
+
+    // new_li.classList.add('sport');
+    // new_li.classList.add('pink-bg');
+
+    // removing a class using Classlist
+    // first_li.classList.remove('pink-bg');
+
+    // removing an element
+    // first_li.remove();
+</script>
+</html>

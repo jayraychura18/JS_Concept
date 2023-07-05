@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Pseudo Elements: before, after */
+    /* CSS Reset */
+    *,
+    ::before,
+    ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        border: white solid;
+        height: 100vh;
+        background-color: rgb(36, 56, 102);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+    h1{
+        margin-bottom: 5rem;
+    }
+    ul{
+        list-style: none;
+        border: solid white;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    li{
+        font-size: 1.3rem;
+        background-color: white;
+        color: black;
+        margin-bottom: 0.3rem;
+        text-align: center;
+        padding: 0.3rem;
+    }
+</style>
+
+<body>
+    <div class="master-container">
+        <h1>My Favourite Sports</h1>
+        <ul class="game-container">
+            <li class="sport" id="tt">Table Tennis</li>
+            <li class="sport">Football</li>
+            <li class="sport">Chess</li>
+            <li class="sport">Cricket</li>
+            <li class="sport">Hockey</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Selecting elements: DOM
+
+    // getElementById - returns single element
+
+    // console.log(document.getElementById('tt'));
+    // let, var, const
+    // const tt = document.getElementById('tt');
+    // tt.style.backgroundColor = 'Yellow';
+
+    // getElementsByClassName - returns ARRAY of elements
+
+    // console.log(document.getElementsByClassName('sport'));
+    // const sports_array = document.getElementsByClassName('sport');
+    // sports_array[2].style.backgroundColor = 'red';
+    // Common Mistake
+    // sports_array.style.backgroundColor = 'blue';
+    // const ul = document.getElementsByClassName('game-container');
+    // console.log(ul);
+    // ul[0].style.backgroundColor = 'red';
+
+    // getElementsByTagName - returns ARRAY of elements
+    // let ul = document.getElementsByTagName('ul');
+    // ul.style.backgroundColor = 'pink';
+    // console.log(ul);
+
+    // querySelector - gives first element of that type
+    // using tag name:
+    // var li = document.querySelector('li');
+    // li.style.backgroundColor = 'Maroon';
+    // using class name:
+    // let ul = document.querySelector('.game-container');
+    // ul.style.backgroundColor = 'pink';
+    // using id:
+    // let first_sport = document.querySelector('#tt');
+    // first_sport.style.color = 'Yellow';
+
+    // querySelectorAll - gives array of all the elements of that type
+    // let all_sports = document.querySelectorAll('li');
+    // let all_sports = document.querySelectorAll('.sport');
+    // console.log(all_sports);
+
+
+    const all_sports = document.getElementsByClassName('sport');
+    // Q: Change backgroundColor of every li to orangered using all_sports
+    // for(let i = 0; i < all_sports.length; i++){
+    //     all_sports[i].style.backgroundColor = 'orangered';
+    // }
+    // Q: Change bgcolor of even li to orangered & odd li to skyblue
+    for(let i = 0; i < all_sports.length; i++){
+        if(i % 2 == 0){
+            all_sports[i].style.backgroundColor = 'orangered';
+        }
+        else{
+            all_sports[i].style.backgroundColor = 'skyblue';
+        }
+    }
+</script>
+</html>
